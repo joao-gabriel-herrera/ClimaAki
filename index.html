@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./script/scripts.js" defer></script>
+    <title>ClimaAki</title>
+  </head>
+
+  <body>
+    <div class="caixa-maior">
+      <input placeholder="Insira a cidade..." class="cidade" />
+      <button class="search" onclick="obterInput()">
+        <img
+          src="https://www.svgrepo.com/show/488200/find.svg"
+          alt="Pesquisar"
+          width="20px"
+          height="20px"
+        />
+      </button>
+      <div>
+        <h1 class="nomeCidade"></h1>
+        <p class="temperatura"></p>
+        <p class="descricao"></p>
+        <p class="umidade"></p>
+      </div>
+    </div>
+  </body>
+</html>
