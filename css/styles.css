@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  background-image: url("https://source.unsplash.com/1920x1080/?landscape");
   font-family: "Open Sans", sans-serif;
 }
 
@@ -46,14 +46,31 @@ input {
 .search:hover {
   background-color: #7c7c7c6b;
 }
-p,
-h1 {
+p {
   color: #fff;
   margin-top: 20px;
   text-transform: capitalize;
 }
+h1 {
+  color: #fff;
+  margin-top: 20px;
+  text-align: center;
+}
+
 @media (max-width: 440px) {
   h1 {
     font-size: 1.4rem;
   }
+}
+.temperatura {
+  text-align: center;
+  font-size: 3rem;
+}
+.temp_box {
+  display: flex;
+  justify-content: center;
+}
+.desc_box {
+  display: flex;
+  justify-content: space-around;
 }
