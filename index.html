@@ -22,7 +22,7 @@
       <input placeholder="Insira a cidade..." class="cidade" />
       <button class="search" onclick="obterInput()">
         <img
-          src="https://www.svgrepo.com/show/488200/find.svg"
+          src="./img/search.png"
           alt="Pesquisar"
           width="20px"
           height="20px"
@@ -39,13 +39,25 @@
           <p class="descricao"></p>
           <p class="sensacao"></p>
         </div>
+        <div class="max_min">
+          <div class="max">
+            <h2>Máxima</h2>
+            <h2 class="temp_max"></h2>
+          </div>
+          <div class="min">
+            <h2>Mínima</h2>
+            <h2 class="temp_min"></h2>
+          </div>
+        </div>
         <div class="wind_humidity">
-          <div class="border_wind"><span class="wind_text">VENTO</span></div>
+          <div class="border_wind">
+            <span class="wind_text">Velocidade do vento</span>
+          </div>
           <p class="vento"></p>
         </div>
         <div class="wind_humidity">
           <div class="border_humidity">
-            <span class="humidity_text">UMIDADE</span>
+            <span class="humidity_text">Umidade do ar</span>
           </div>
           <p class="umidade"></p>
         </div>

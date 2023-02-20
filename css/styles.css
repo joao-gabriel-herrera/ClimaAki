@@ -14,7 +14,11 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .caixa-maior {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(68, 0, 122, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
   width: 95%;
   max-width: 420px;
   padding: 20px;
@@ -24,26 +28,31 @@ body {
 input {
   border: none;
   outline: none;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 24px;
   font-size: 20px;
-  background-color: #7c7c7c2b;
+  background-color: #670882;
   color: #ffffff;
-  width: calc(100% - 100px);
+  width: 80%;
 }
-
+input::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
 .search {
   border: none;
   outline: none;
   padding: 10px;
   border-radius: 50px;
-  background-color: #7c7c7c2b;
+  background-color: #670882;
   float: right;
   cursor: pointer;
+  width: 15%;
 }
 
 .search:hover {
-  background-color: #7c7c7c6b;
+  background-color: #4a075d;
+  transition: 0.4s;
 }
 p {
   color: #fff;
@@ -72,26 +81,25 @@ h1 {
 .desc_box {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #ddd;
   align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
 }
 .desc_box p {
   margin: 0;
   padding: 5px;
 }
 .border_wind {
-  height: 15px;
-  width: 5px;
-  background-color: #178441;
+  height: 17px;
+  width: 7px;
+  background-color: #09ca53;
   border-radius: 25px;
   display: flex;
   align-items: center;
 }
 .border_humidity {
-  height: 15px;
-  width: 5px;
-  background-color: #313bc9;
+  height: 17px;
+  width: 7px;
+  background-color: #0918f0;
   border-radius: 25px;
   display: flex;
   align-items: center;
@@ -112,7 +120,8 @@ span.wind_text,
 span.humidity_text {
   margin-left: 15px;
   color: #fff;
-  font-size: small;
+  font-size: medium;
+  position: absolute;
 }
 i {
   margin-right: 10px;
@@ -141,4 +150,34 @@ p.descricao {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.max_min {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  gap: 20%;
+  padding: 10px 0 20px 0;
+}
+.max,
+.min {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.max h2,
+.min h2 {
+  margin: 0;
+  padding: 5px;
+  color: #fff;
+  font-weight: 400;
+}
+.temp_max img,
+.temp_min img {
+  margin-right: 5px;
+}
+@media (max-width: 350px) {
+  i.fa-wind {
+    display: none;
+  }
 }

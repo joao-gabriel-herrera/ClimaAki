@@ -2,11 +2,23 @@
 function obterInput() {
   if (document.querySelector(".cidade").value) {
     let input = document.querySelector(".cidade").value;
-    buscarCidade(input);
+    buscarCidade(input).then((respostaAPI) => {
+      if (respostaAPI.erro) {
+        alert(
+          `Infelizmente não encontrei essa cidade ou você digitou errado, tente novamente!`
+        );
+      }
+    });
     limparInput();
   } else {
     let input = "sao paulo";
-    buscarCidade(input);
+    buscarCidade(input).then((respostaAPI) => {
+      if (respostaAPI.erro) {
+        alert(
+          `Infelizmente não encontrei essa cidade ou você digitou errado, tente novamente!`
+        );
+      }
+    });
   }
 }
 document.querySelector(".cidade").addEventListener("keydown", function (event) {
@@ -21,6 +33,11 @@ async function buscarCidade(input) {
   const respostaAPI = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=c12b8f8d282499fa03d73404bcc0db8a&lang=pt_br&units=metric`
   ).then((respostaAPI) => respostaAPI.json());
+
+  if (respostaAPI.cod && respostaAPI.cod !== 200) {
+    return { erro: respostaAPI.message };
+  }
+
   mostrarDados(respostaAPI);
 }
 function mostrarDados(respostaAPI) {
@@ -42,6 +59,16 @@ function mostrarDados(respostaAPI) {
     ".sensacao"
   ).innerHTML = `<i class="fa-solid fa-temperature-high"></i>Sensação térmica: ${Math.round(
     respostaAPI.main.feels_like
+  )}°C`;
+  document.querySelector(
+    ".temp_max"
+  ).innerHTML = `<img src="./img/up.png" alt="Temperatura máxima"/>${Math.round(
+    respostaAPI.main.temp_max
+  )}°C`;
+  document.querySelector(
+    ".temp_min"
+  ).innerHTML = `<img src="./img/down.png" alt="Temperatura mínima"/>${Math.round(
+    respostaAPI.main.temp_min
   )}°C`;
   document.querySelector(
     ".umidade"
