@@ -13,7 +13,6 @@ body {
   background-image: url("https://source.unsplash.com/1920x1080/?landscape");
   font-family: "Open Sans", sans-serif;
 }
-
 .caixa-maior {
   background-color: rgba(0, 0, 0, 0.8);
   width: 95%;
@@ -72,5 +71,74 @@ h1 {
 }
 .desc_box {
   display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  padding-bottom: 25px;
+}
+.desc_box p {
+  margin: 0;
+  padding: 5px;
+}
+.border_wind {
+  height: 15px;
+  width: 5px;
+  background-color: #178441;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+.border_humidity {
+  height: 15px;
+  width: 5px;
+  background-color: #313bc9;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+.wind_humidity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+p.vento,
+p.umidade {
+  margin: 0;
+}
+
+span.wind_text,
+span.humidity_text {
+  margin-left: 15px;
+  color: #fff;
+  font-size: small;
+}
+i {
+  margin-right: 10px;
+}
+.rise_set {
+  display: flex;
   justify-content: space-around;
+  padding: 10px;
+}
+.sunset,
+.sunrise {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.sunset p,
+.sunrise p {
+  margin: 0;
+  text-transform: none;
+  padding: 5px;
+}
+.sunrise img {
+  margin: auto;
+}
+p.descricao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

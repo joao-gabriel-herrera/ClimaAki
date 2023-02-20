@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./script/scripts.js" defer></script>
     <link rel="icon" href="./img/nuvem.webp" type="image/webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>ClimaAki</title>
   </head>
 
@@ -32,9 +39,28 @@
           <p class="descricao"></p>
           <p class="sensacao"></p>
         </div>
-        <p class="umidade"></p>
-        <p class="nascerSol"></p>
-        <p class="porSol"></p>
+        <div class="wind_humidity">
+          <div class="border_wind"><span class="wind_text">VENTO</span></div>
+          <p class="vento"></p>
+        </div>
+        <div class="wind_humidity">
+          <div class="border_humidity">
+            <span class="humidity_text">UMIDADE</span>
+          </div>
+          <p class="umidade"></p>
+        </div>
+        <div class="rise_set">
+          <div class="sunrise">
+            <p>Nascer do sol</p>
+            <p class="nascerSol"></p>
+            <img src="./img/sunrise.png" alt="Nascer do sol" width="80px" />
+          </div>
+          <div class="sunset">
+            <p>Pôr do sol</p>
+            <p class="porSol"></p>
+            <img src="./img/moonrise.png" alt="Pôr do sol" width="80px" />
+          </div>
+        </div>
       </div>
     </div>
   </body>
