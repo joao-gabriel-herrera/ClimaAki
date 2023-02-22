@@ -1,7 +1,7 @@
 // Api key: c12b8f8d282499fa03d73404bcc0db8a
 function obterInput() {
   if (document.querySelector(".cidade").value) {
-    let input = document.querySelector(".cidade").value;
+    let input = document.querySelector(".cidade").value.trim();
     buscarCidade(input).then((respostaAPI) => {
       if (respostaAPI.erro) {
         alert(
